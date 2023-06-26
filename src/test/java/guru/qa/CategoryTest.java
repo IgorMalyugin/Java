@@ -38,7 +38,7 @@ public class CategoryTest {
         open("https://www.wildberries.ru/");
         $(".swiper-container").should(exist);
         $(".nav-element__burger-line").click();
-        $(".menu-burger__main-list").$(byText(category.name())).click();
+        $(".menu-burger__main-list").$(byText(category.getTitle())).click();
         $(".menu-catalog").shouldHave(text(String.join(" ", product)));
     }
 }
